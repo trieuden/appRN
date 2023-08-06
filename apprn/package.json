@@ -3,16 +3,30 @@
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
+    "start": "concurrently \"node server.js\" \"expo start --web\"",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo/webpack-config": "^18.0.1",
+    "@react-navigation/stack": "^6.3.17",
+    "axios": "^1.4.0",
+    "concurrently": "^8.2.0",
+    "cors": "^2.8.5",
     "expo": "~48.0.18",
     "expo-status-bar": "~1.4.4",
-    "react": "18.2.0",
-    "react-native": "0.71.8"
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-native": "0.71.8",
+    "react-native-chart-kit": "^6.12.0",
+    "react-native-dotenv": "^3.4.9",
+    "react-native-sqlite-storage": "^6.0.1",
+    "react-native-vector-icons": "^9.2.0",
+    "react-native-web": "~0.18.10",
+    "typeorm": "^0.3.17"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
